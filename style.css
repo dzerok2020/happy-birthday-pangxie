@@ -1149,6 +1149,7 @@ span{
     background-color: #ffd2e4;
     transition: all 1s;
     overflow: hidden;
+    overflow-y: auto;
 }
 .boxMail .boxMail-container:hover .card2-content{
     transform: translate(20px, 20px);
