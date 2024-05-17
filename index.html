@@ -114,7 +114,7 @@
 	  const card2 = document.querySelector(".card2");
 	  
 	  let i = 0;
-		let check = false;
+	
 	  card2.addEventListener("mouseenter", function() {
 	      if (i === 0) {
         const splitMainContentLetter = mainContentLetter.split("");
@@ -133,17 +133,8 @@
         })
         i++;
 	      }, 4000);
-		      check = true
+		      
 	      }
-	  })
-	  
-	  
-	  card2.addEventListener("mouseover", function() {
-	    if (check) {
-		  i = 0;
-	          document.querySelector(".h2 h2").innerHTML = "";
-		    check = false
-	    }
 	  })
 	  
 	  
