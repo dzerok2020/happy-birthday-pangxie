@@ -119,20 +119,23 @@
 	      if (i === 0) {
         const splitMainContentLetter = mainContentLetter.split("");
         
-        setTimeout(function (){
-        splitMainContentLetter.forEach((val, index) => {
+        setTimeout(function () {
+          splitMainContentLetter.forEach((val, index) => {
             const effectType = setTimeout(() => {
-                if (val !== "1") {
-                    document.querySelector(".h2 h2").innerHTML += val;
-                } else {
-                    document.querySelector(".h2 h2").innerHTML += "<br>";
-                }
-                const mainContent = document.querySelector(".h2");
-                mainContent.scrollTop = mainContent.scrollHeight;
-            }, 50 * index)
-        })
-        i++;
-	      }, 4000);
+              const h2Element = document.querySelector(".h2 h2");
+              let currentText = h2Element.innerHTML.replace(/❤️$/, "");
+
+              if (val !== "1") {
+                h2Element.innerHTML = currentText + val + "❤️";
+              } else {
+                h2Element.innerHTML = currentText + "<br>";
+              }
+              const mainContent = document.querySelector(".h2");
+              mainContent.scrollTop = mainContent.scrollHeight;
+            }, 50 * index);
+          });
+          i++;
+        }, 4000);
 		      
 	      }
 	  })
