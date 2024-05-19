@@ -116,7 +116,7 @@
 	  let i = 0;
 	
 	  card2.addEventListener("mouseenter", function() {
-		  birthdayAudio.play();
+		  
 	      if (i === 0) {
         const splitMainContentLetter = mainContentLetter.split("");
         
@@ -170,10 +170,12 @@
 		mailBox.onclick = function () {
 			mailBox.classList.toggle('active');
 			boxmail.classList.add('active');
+			birthdayAudio.play();
 		};
 
 		close.addEventListener('click', function () {
 			boxmail.classList.remove('active');
+			birthdayAudio.paused;
 		});
 	</script>
 </html>
