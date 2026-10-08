@@ -1,1294 +1,1137 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    min-height: 100vh;
-    background: linear-gradient(to right, #FBDAE9, #EFB0C9);
-    overflow: hidden;
-}
-.container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.container .boxcontainer{
-    width: 700px;
-    height: 450px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: -5px -5px 15px rgba(255, 255, 255),
-                5px 5px 15px rgb(0, 0, 0, 0.5);
-    background-image: radial-gradient(circle farthest-corner at center, #ffe0ee 0%, #ffd3ee 100%);
-    animation: bgr 4s forwards;
-    transition: 1s;
-}
-@keyframes bgr {
-    0%{
-        opacity: 0;
-        visibility: hidden;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
-}
-.container .image{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    animation: flag 2s forwards;
-    opacity: 0;
-    visibility: hidden;
-    animation-delay: 2s;
-    z-index: 1;
-    transition: all 1s;
-}
-@keyframes flag{
-    0%{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-50px);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-}
-.container .image > img{
-    width: 500px;
-}
-.container .text-happybirthday{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    transform: translateY(-160px);
-    animation: texthappy 3s forwards;
-    animation-delay: 3s;
-    transition: 1s ease-in-out;
-}
-@keyframes texthappy{
-    0%{
-        transform: translateY(-160px);
-    }
-    40%{
-        transform: translateY(90px);
-    }
-    50%{
-        transform: translateY(95px);
-    }
-    55%{
-        transform: translateY(40px);
-    }
-    60%{
-        transform: translateY(80px);
-    }
-    70%{
-        transform: translateY(50px);
-    }
-    80%, 90%, 100%{
-        transform: translateY(70px);
-    }
-}
-.container .text-happybirthday::before{
-    position: absolute;
-    content: '';
-    width: 2px;
-    height: 150px;
-    background: #333;
-    top: -25%;
-    z-index: -1;
-}
-.container .text-happybirthday img{
-    width: 200px;
-    transform: translateX(-50%);
-}
-.container .cake{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    outline: none;
-    animation: cake 3s ease forwards;
-    animation-delay: 4s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100000;
-}
-@keyframes cake{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(200px);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0px);
-    }
-}
-.container .cake img{
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    margin-top: 50px;
-    z-index: 10000;
-    transition: 1s;
-    cursor: pointer;
-}
-.container .cake img:hover{
-    animation: cake1 0.5s infinite linear;
-}
-@keyframes cake1{
-    0%{
-        transform: rotate(5deg);
-    }
-    25%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(-5deg);
-    }
-    75%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(5deg);
-    }
-}
-.box-balloon{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.box-balloon .balloon-item1{
-    position: absolute;
-}
-.box-balloon .balloon-item1 img{
-    width: 80px;
-}
-.box-balloon .balloon-item1:nth-child(1){
-    animation: item1 8s forwards,
-                item2 4s 8s linear infinite;
-    transition: all 1s;
-    opacity: 0;
-    visibility: hidden;
-}
-@keyframes item2{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-        transform: translateY(0px);
-    }
-    25%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-        transform: translateY(5px);
-    }
-    50%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-        transform: translateY(0px);
-    }
-    75%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-        transform: translateY(-5px);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-        transform: translateY(0px);
-    }
-}
-@keyframes item1{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        right: 0%;
-        transform: translateX(-50%);
-        transform: rotate(5deg);
-        bottom: -50%;
-    }
-    10%{
-        transform: rotate(-5deg);
-    }
-    20%{
-        transform: rotate(5deg);
-    }
-    30%{
-        transform: rotate(-5deg);
-    }
-    40%{
-        transform: rotate(5deg);
-    }
-    50%{
-        transform: rotate(-5deg);
-    }
-    60%{
-        transform: rotate(5deg);
-    }
-    70%{
-        transform: rotate(-5deg);
-    }
-    80%{
-        transform: rotate(5deg);
-    }
-    90%{
-        transform: rotate(-5deg);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        right: 86%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 58%;
-    }
-}
-.box-balloon .balloon-item1:nth-child(2){
-    animation: item3 8s forwards,
-                item4 4s 8s linear infinite;
-    transition: all 1s;
-    opacity: 0;
-    visibility: hidden;
-}
-@keyframes item4{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-        transform: translateY(0px);
-    }
-    25%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-        transform: translateY(5px);
-    }
-    50%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-        transform: translateY(0px);
-    }
-    75%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-        transform: translateY(-5px);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-        transform: translateY(0px);
-    }
-}
-@keyframes item3{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        left: 0%;
-        transform: translateX(-50%);
-        transform: rotate(5deg);
-        bottom: -50%;
-    }
-    10%{
-        transform: rotate(-5deg);
-    }
-    20%{
-        transform: rotate(5deg);
-    }
-    30%{
-        transform: rotate(-5deg);
-    }
-    40%{
-        transform: rotate(5deg);
-    }
-    50%{
-        transform: rotate(-5deg);
-    }
-    60%{
-        transform: rotate(5deg);
-    }
-    70%{
-        transform: rotate(-5deg);
-    }
-    80%{
-        transform: rotate(5deg);
-    }
-    90%{
-        transform: rotate(-5deg);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        left: 85%;
-        transform: translateX(0%);
-        transform: rotate(0deg);
-        bottom: 60%;
-    }
-}
-.container .box-cloud{
-    position: absolute;
-    width: 100%;
-    height: auto;
-}
-.container .cloud{
-    position: absolute;
-    z-index: 10000;
-    opacity: 0;
-    animation: cloud 10s infinite linear;
-    animation-delay: 4s;
-}
-@keyframes cloud{
-    0%{
-        opacity: 1;
-        transform: translateX(-100px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(800px);
-    }
-}
-.container .cloud:first-child{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container .cloud:first-child::before{
-    position: absolute;
-    content: '小公主生日快乐';
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    width: 60px;
-    font-size: 9px;
-    align-items: center;
-    z-index: 100000;
-}
-.container .cloud:last-child::before{
-    position: absolute;
-    content: 'HAPPY BIRTHDAY';
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 9px;
-    align-items: center;
-    z-index: 100000;
-}
-.container .cloud:last-child{
-    position: absolute;
-    z-index: 10000;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: cloud2 13s infinite linear;
-    animation-delay: 4.5s;
-    margin-top: 10px;
-}
-@keyframes cloud2{
-    0%{
-        opacity: 1;
-        transform: translateX(800px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(-100px);
-    }
-}
-.container .cloud > img{
-    width: 100px;
-    filter: drop-shadow(1px 4px 0px rgb(188, 188, 188));
-}
-.container .box-firework{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.container .box-firework .firework{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    animation: firework 2s forwards;
-    animation-delay: 5s;
-    transform: translate(30px, 300px);
-}
-.container .box-firework .firework > img{
-    width: 100px;
-}
-@keyframes firework{
-    0%{
-        opacity: 0;
-        visibility: hidden;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
-}
-.container .box-firework .firework #firework1{
-    position: absolute;
-    width: 20px;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-50px, 35px);
-    /* transform: translate(-60px, -50px); */
-    animation: firework1 2s linear infinite;
-    animation-delay: 6s;
-    transition: all 1s ease-in-out;
-}
-@keyframes firework1{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50px, 35px);
-        width: 20px;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        width: 150px;
-        transform: translate(-70px, -70px);
-    }
-}
-.container .box-firework .firework:last-child{
-    transform: scaleX(-1);
-    top: 300px;
-    right: 30px;
-}
-.container .spark{
-    position: absolute;
-}
-span{
-    position: absolute;
-    pointer-events: none;
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
-    animation: fadeInOut 1s linear infinite;
-}
-@keyframes fadeInOut{
-    0%,100%{
-        opacity: 0;
-    }
-    20%, 80%{
-        opacity: 1;
-    }
-}
-.container .paperCannons{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    display: flex;
-    justify-content: center;
-}
-.container .paperCannons > img{
-    width: 350px;
-    transition: all 1s;
-    animation: paperCannons 2s forwards;
-    animation-delay: 7s;
-    opacity: 0;
-    visibility: hidden;
-}
-@keyframes paperCannons{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        transform: scale(0);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-    }
-}
-.container .box-giftbox{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.container .box-giftbox > img:nth-child(1){
-    width: 50px;
-    margin-top: 360px;
-    margin-left: 120px;
-    transform: rotate(-10deg);
-    animation: giftbox2 0.5s linear infinite;
-    animation-delay: 8.5s;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 2s;
-}
-.container .box-giftbox > img:nth-child(2){
-    position: absolute;
-    width: 30px;
-    margin-top: 250px;
-    margin-left: -150px;
-    transform: rotate(15deg);
-    filter: blur(1px);
-    opacity: 0;
-    visibility: hidden;
-    animation: giftbox1 4s forwards;
-    animation-delay: 8s;
-}
-.container .box-giftbox > img:nth-child(3){
-    position: absolute;
-    width: 25px;
-    margin-top: 200px;
-    margin-left: 450px;
-    transform: rotate(15deg);
-    filter: blur(2px);
-    opacity: 0;
-    visibility: hidden;
-    animation: giftbox1 4s forwards;
-    animation-delay: 8s;
-}
-.container .box-giftbox > img:nth-child(4){
-    position: absolute;
-    width: 55px;
-    margin-top: 380px;
-    margin-left: 340px;
-    transform: rotate(15deg);
-    animation: giftbox2 0.5s linear infinite;
-    animation-delay: 8.5s;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 2s;
-}
-@keyframes giftbox1{
-    0%{
-        opacity: 0;
-        visibility: hidden;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
-}
-@keyframes giftbox2{
-    0%{
-        visibility: visible;
-        opacity: 1;
-        transform: rotate(-10deg);
-    }
-    25%{
-        opacity: 1;
-        visibility: visible;
-        transform: rotate(0deg);
-    }
-    50%{
-        visibility: visible;
-        opacity: 1;
-        transform: rotate(10deg);
-    }
-    75%{
-        opacity: 1;
-        visibility: visible;
-        transform: rotate(0deg);
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        transform: rotate(-10deg);
-    }
-}
-.container .box-giftbox > img:nth-child(5){
-    position: absolute;
-    width: 30px;
-    bottom: 0;
-    transform: translate(-90px, 50px);
-    animation: giftbox3 2s linear infinite;
-    animation-delay: 10s;
-    filter: drop-shadow(0 0 15px red);
-    transition: all 1s;
-}
-.container .box-giftbox > img:nth-child(6){
-    position: absolute;
-    width: 30px;
-    bottom: 0;
-    right: 0;
-    transform: translate(-60px, 50px);
-    animation: giftbox4 2s linear infinite;
-    animation-delay: 11s;
-    filter: drop-shadow(0 0 15px red);
-    transition: all 1s;
-}
-@keyframes giftbox3{
-    0%{
-        transform: translate(-100px, 35px);
-    }
-    2%{
-        transform: translate(-80px, 5px) rotate(10deg);
-    }
-    4%{
-        transform: translate(-70px, -25px) rotate(20deg);
-    }
-    6%{
-        transform: translate(-55px, -50px) rotate(30deg);
-    }
-    8%{
-        transform: translate(-50px, -60px) rotate(40deg);
-    }
-    10%{
-        transform: translate(-45px, -70px) rotate(50deg);
-    }
-    12%{
-        transform: translate(-40px, -80px) rotate(60deg);
-    }
-    14%{
-        transform: translate(-35px, -90px) rotate(70deg);
-    }
-    16%{
-        transform: translate(-30px, -100px) rotate(80deg);
-    }
-    18%{
-        transform: translate(-25px, -110px) rotate(90deg);
-    }
-    20%{
-        transform: translate(-20px, -115px) rotate(100deg);
-    }
-    22%{
-        transform: translate(-15px, -120px) rotate(110deg) scale(1.1);
-    }
-    26%{
-        transform: translate(-10px, -125px) rotate(120deg) scale(1.1);
-    }
-    30%{
-        transform: translate(-5px, -130px) rotate(130deg) scale(1.2);
-    }
-    40%{
-        transform: translate(0px, -135px) rotate(140deg) scale(1.2);
-    }
-    50%{
-        transform: translate(5px, -140px) rotate(150deg) scale(1.2);
-    }
-    60%{
-        transform: translate(10px, -145px) rotate(160deg) scale(1.3);
-    }
-    70%{
-        transform: translate(20px, -150px) rotate(170deg) scale(1.3);
-    }
-    75%{
-        transform: translate(30px, -150px) rotate(180deg) scale(1.3);
-    }
-    80%{
-        transform: translate(40px, -150px) rotate(185deg) scale(1.2);
-    }
-    82%{
-        transform: translate(50px, -145px) rotate(190deg) scale(1.1);
-    }
-    84%{
-        transform: translate(55px, -140px) rotate(200deg) scale(1.1);
-    }
-    86%{
-        transform: translate(60px, -135px) rotate(210deg) scale(1.1);
-    }
-    88%{
-        transform: translate(65px, -130px) rotate(220deg) scale(0.9);
-    }
-    90%{
-        transform: translate(70px, -110px) rotate(230deg) scale(0.9);
-    }
-    92%{
-        transform: translate(80px, -80px) rotate(240deg) scale(0.8);
-    }
-    94%{
-        transform: translate(90px, -55px) rotate(250deg) scale(0.8);
-    }
-    96%{
-        transform: translate(100px, -20px) rotate(185deg) scale(0.7);
-    }
-    98%{
-        transform: translate(110px, 5px) rotate(195deg) scale(0.6);
-    }
-    100%{
-        transform: translate(120px, 35px) rotate(205deg) scale(0.5);
-    }
-}
-@keyframes giftbox4{
-    0%{
-        transform: translate(0px, 35px);
-    }
-    2%{
-        transform: translate(-20px, 5px) rotate(10deg);
-    }
-    4%{
-        transform: translate(-30px, -25px) rotate(20deg);
-    }
-    6%{
-        transform: translate(-45px, -50px) rotate(30deg);
-    }
-    8%{
-        transform: translate(-50px, -60px) rotate(40deg);
-    }
-    10%{
-        transform: translate(-55px, -70px) rotate(50deg);
-    }
-    12%{
-        transform: translate(-60px, -80px) rotate(60deg);
-    }
-    14%{
-        transform: translate(-65px, -90px) rotate(70deg);
-    }
-    16%{
-        transform: translate(-70px, -100px) rotate(80deg);
-    }
-    18%{
-        transform: translate(-75px, -110px) rotate(90deg);
-    }
-    20%{
-        transform: translate(-80px, -115px) rotate(100deg);
-    }
-    22%{
-        transform: translate(-85px, -120px) rotate(110deg) scale(1.1);
-    }
-    26%{
-        transform: translate(-90px, -125px) rotate(120deg) scale(1.1);
-    }
-    30%{
-        transform: translate(-95px, -130px) rotate(130deg) scale(1.2);
-    }
-    40%{
-        transform: translate(-100px, -135px) rotate(140deg) scale(1.2);
-    }
-    50%{
-        transform: translate(-105px, -140px) rotate(150deg) scale(1.2);
-    }
-    60%{
-        transform: translate(-110px, -145px) rotate(160deg) scale(1.3);
-    }
-    70%{
-        transform: translate(-120px, -150px) rotate(170deg) scale(1.3);
-    }
-    75%{
-        transform: translate(-130px, -150px) rotate(180deg) scale(1.3);
-    }
-    80%{
-        transform: translate(-140px, -150px) rotate(185deg) scale(1.2);
-    }
-    82%{
-        transform: translate(-150px, -145px) rotate(190deg) scale(1.1);
-    }
-    84%{
-        transform: translate(-155px, -140px) rotate(200deg) scale(1.1);
-    }
-    86%{
-        transform: translate(-160px, -135px) rotate(210deg) scale(1.1);
-    }
-    88%{
-        transform: translate(-165px, -130px) rotate(220deg) scale(0.9);
-    }
-    90%{
-        transform: translate(-170px, -110px) rotate(230deg) scale(0.9);
-    }
-    92%{
-        transform: translate(-180px, -80px) rotate(240deg) scale(0.8);
-    }
-    94%{
-        transform: translate(-190px, -55px) rotate(250deg) scale(0.8);
-    }
-    96%{
-        transform: translate(-200px, -20px) rotate(185deg) scale(0.7);
-    }
-    98%{
-        transform: translate(-210px, 5px) rotate(195deg) scale(0.6);
-    }
-    100%{
-        transform: translate(-220px, 35px) rotate(205deg) scale(0.5);
-    }
-}
-.container .mail{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    animation: envelope 1s forwards;
-    animation-delay: 11.5s;
-    z-index: 100000000;
-}
-.container .mail .fa-envelope{
-    position: absolute;
-    margin-top: 50px;
-    font-size: 40px;
-    color: red;
-    cursor: pointer;
-    z-index: 1000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@keyframes envelope{
-    0%{
-        opacity: 1;
-        visibility: visible;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-    }
+/* ==========================================================================
+   Chúc mừng sinh nhật · 生日快乐 — thiệp sinh nhật cho Pangxie (小公主)
+   --------------------------------------------------------------------------
+   Design read: một trang quà tặng cá nhân (keepsake) cho MỘT người nhận.
+   Ngôn ngữ thị giác: giấy ấm + sổ lưu niệm (scrapbook) với đỏ son và vàng kim
+   (lấy từ chính bộ ảnh gốc), kết thúc bằng một dải trời đêm điện ảnh để thổi nến.
+   Font: Noto Serif SC (chữ Hán), Be Vietnam Pro (tiếng Việt), Cormorant Garamond
+   (chữ Latin), Dancing Script (chữ ký ZERO).
+   Nguyên tắc: không có GSAP thì trang vẫn hiện đầy đủ (mọi hiệu ứng là lớp phủ).
+   Chỉ animate transform/opacity. Không dùng window scroll event.
+   ========================================================================== */
 
-}
-.container .mail .fa-envelope:hover{
-    filter: drop-shadow(0 0 10px red);
-    animation: mail1 0.3s infinite ease-in-out;
-    transition: all 1s ease-in;
-}
-@keyframes mail1{
-    0%{
-        transform: rotate(-10deg);
-    }
-    25%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(10deg);
-    }
-    75%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(-10deg);
-    }
-}
-.container .mail .fa-envelope::after{
-    position: absolute;
-    content: '';
-    width: 55px;
-    height: 45px;
-    background: white;
-    z-index: -1;
-    border-radius: 10px;
-}
-.container .boxcute{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.container .cute1{
-    position: absolute;
-    top: 210px;
-    left: -100px;
-    animation: cute 3s infinite ease-in-out;
-    animation-delay: 13s;
-}
-@keyframes cute{
-    0%{
-        transform: translateX(0px) rotateZ(0deg) scale(0.7);
-    }
-    50%,60%, 70%,80%,90%,95%{
-        transform: translateX(70px) rotateZ(45deg) scale(1.3);
-    }
-    100%{
-        transform: translateX(10px) rotateZ(0deg) scale(0.3);
-    }
-}
-.container .cute1::after{
-    position: absolute;
-    content: '请点击这封信，小公主';
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 10px;
-    width: 80px;
-    font-size: 10px;
-    background: white;
-    border-radius: 15px;
-    margin-top: -30px;
-    margin-left: -40px;
-    animation: cutemail 3s linear infinite;
-    animation-delay: 13s;
-    z-index: -1;
-    opacity: 0;
-    font-weight: 600;
-}
-@keyframes cutemail{
-    0%{
-        opacity: 1;
-        transform: translate(-60px, 40px) scale(0.1);
-    }
-    50%, 60%, 70%, 80%, 90%, 95%, 99%{
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-60px, 40px) scale(0.1);
-    }
-}
-.container .cute2{
-    position: absolute;
-    top: 210px;
-    right: -100px;
-    transform: scaleX(-1);
-    animation: cute2 3s infinite ease-in-out;
-    animation-delay: 12s;
-}
-@keyframes cute2{
-    0%{
-        transform: translateX(0px) rotateZ(0deg) scale(0.7);
-    }
-    50%,60%, 70%,80%,90%,95%{
-        transform: translateX(-70px) rotateZ(-45deg) scale(1.3);
-    }
-    100%{
-        transform: translateX(-10px) rotateZ(0deg) scale(0.3);
-    }
-}
-.container .cute2::after{
-    position: absolute;
-    content: '你好小公主';
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 10px;
-    width: 80px;
-    font-size: 10px;
-    background: white;
-    border-radius: 15px;
-    margin-top: -30px;
-    margin-left: -100px;
-    animation: cutemail2 3s linear infinite;
-    animation-delay: 12s;
-    z-index: -1;
-    opacity: 0;
-    font-weight: 600;
-}
-@keyframes cutemail2{
-    0%{
-        opacity: 1;
-        transform: translate(-10px, 70px) scale(0.1);
-    }
-    50%, 60%, 70%, 80%, 90%, 95%, 99%{
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-    }
-    100%{
-        opacity: 1;
-        transform: translate(-10px, 70px) scale(0.1);
-    }
-}
-.container .cute1 img{
-    width: 100px;
-    height: 100px;
-}
-.container .cute2 img{
-    width: 100px;
-    height: 100px;
-}
-.boxMail{
-    position: fixed;
-    background: rgb(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0.3);
-    visibility: hidden;
-    transition: all 0.5s;
-    z-index: 100000000;
-}
-.boxMail.active{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-.boxMail .boxMail-container{
-    position: absolute;
-    width: 750px;
-    height: 500px;
-    display: flex;
-    margin: 0;
-    transform: scale(0.9);
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    transition: all 0.5s;
-}
-.boxMail .boxMail-container:hover{
-    transform: rotate(-5deg);
-    filter: drop-shadow(0 0 10px red);
-}
-.boxMail .boxMail-container:hover .card1{
-    transform: translate(-187px, -250px) rotateY(-140deg);
-}
-.boxMail .boxMail-container .card1,
-.boxMail .boxMail-container .card2{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid black;
-}
-.boxMail .boxMail-container .card1{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, rgb(169, 0, 0), rgb(202, 0, 0) 30%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.boxMail-container .card1{
-    z-index: 1;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s ease-in-out;
-}
-.boxMail .boxMail-container .card1 .userImg{
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background-color: white;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid white;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-.boxMail .boxMail-container .card1 .userImg img{
-    position: absolute;
-    object-fit: cover;
-    width: calc(100%);
-    height: calc(100%);
-}
-.boxMail .boxMail-container .card1 h3{
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    text-transform: uppercase;
-    width: 80%;
-    text-align: center;
-    line-height: 1.5;
-    letter-spacing: 5px;
-    transform: rotate(-5deg);
-    text-shadow: 0 0 5px white,
-                0 0 10px white;
-}
-.boxMail .boxMail-container .card2{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s;
-}
-.boxMail .boxMail-container .card2 .card2-content{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: #ffd2e4;
-    transition: all 1s;
-    overflow: hidden;
-    transition: .5s;
-}
-.boxMail .boxMail-container .card2 .card2-content .h2 {
-    width: 100%;
-    max-height: 425px;
-    transition: .5s;
-    overflow-y: auto;
-}
-.boxMail .boxMail-container .card2 .card2-content .h2::-webkit-scrollbar {
-    background-color: white;
-    width: 4px;
-}
-.boxMail .boxMail-container .card2 .card2-content .h2::-webkit-scrollbar-thumb {
-    background-color: rgb(8, 143, 143);
-}
-.boxMail .boxMail-container:hover .card2-content{
-    transform: translate(20px, 20px);
-    box-shadow: -1px -1px 5px rgb(0, 0, 0, 0.4);
-}
-.boxMail .boxMail-container .card2 h3{
-    font-family: 'Dancing Script', cursive;
-    padding: 20px 0px 10px 60px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 25px;
-    text-shadow: 0 0 8px red;
-}
-.boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
-    animation-delay: 2s;
-    transition: 1s;
-}
-@keyframes texth3{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        padding: 20px 0px 10px 60px;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        padding: 20px 0px 10px 152px; 
-    }
-}
-.boxMail .boxMail-container .card2 h2{
-    font-family: 'Dancing Script', cursive;
-    padding: 0px 20px;
-    text-indent: 20px;
-    font-size: 17px;
-    opacity: 0;
-}
-.boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 4s;
-    transition: 1s;
-}
-@keyframes texth2{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.boxMail .boxMail-container .card2 .card2-content .imageCute2{
-    position: absolute;
-    top: 5px;
-    left: 20px;
-    opacity: 0;
-    transition: 1s;
-}
-.boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
-    animation: cute3 1s linear infinite,
-                cute4 3s 2s forwards;
-    animation-delay: 2s;
-    transition: 1s;
-}
-@keyframes cute3{
-    0%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    25%{
-        opacity: 1;
-        transform: rotate(5deg);
-    }
-    50%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    75%{
-        opacity: 1;
-        transform: rotate(-5deg);
-    }
-    100%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-}
-@keyframes cute4{
-    0%{
-        left: 20px;
-    }
-    100%{
-        left: 100px;
-    }
-}
-.boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
-    width: 40px;
-}
-.boxMail .boxMail-container .card1 .imageCute img{
-    width: 140px;
-}
-.boxMail .fa-xmark{
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-size: 30px;
-    padding: 10px 25px;
-    cursor: pointer;
-    color: white;
-    z-index: 10000000000000000;
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* Giấy & mực — không dùng đen tuyền #000 */
+  --paper: #fff7ee;
+  --paper-2: #ffefe0;
+  --paper-3: #fffdf9;
+  --ink: #2a1f2b;
+  --ink-soft: #6b5a63;
+
+  /* Màu lấy từ chính bộ asset gốc */
+  --red: #e44545;
+  --red-deep: #c53f35;
+  --gold: #e5ae41;
+  --gold-soft: #f6d99a;
+  --cyan: #4cc9f3;
+
+  /* Dải trời đêm */
+  --night: #1b1430;
+  --night-2: #2b1b3d;
+  --night-3: #140f26;
+  --moon: #f6ecff;
+
+  --font-display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-zh: 'Noto Serif SC', 'Songti SC', 'SimSun', 'Noto Sans SC', serif;
+  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Dancing Script', 'Segoe Script', cursive;
+  --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+
+  --maxw: 1180px;
+  --radius: 20px;
+  --shadow-soft: 0 18px 40px -18px rgba(42, 31, 43, .35);
+  --shadow-card: 0 34px 70px -34px rgba(42, 31, 43, .55);
 }
 
-/* ----- hiệu ứng di chuyển chuột----- */
-span::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(heart.png);
-    background-size: cover;
-    animation: moveheart 1s linear infinite;
+/* --------------------------------------------------------------------------
+   2. RESET & NỀN TẢNG
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
-@keyframes moveheart{
-    0%{
-        transform: translate(0) rotate(0deg);
-    }
-    100%{
-        transform: translate(100px) rotate(360deg);
-    }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
-/* ------hết hiệu ứng di chuyển chuột----- */
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, .96rem + .3vw, 1.075rem);
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(1200px 620px at 8% -12%, #fff3e2 0%, rgba(255, 243, 226, 0) 62%),
+    radial-gradient(900px 520px at 102% 6%, #ffe9f0 0%, rgba(255, 233, 240, 0) 58%),
+    radial-gradient(760px 460px at 50% 108%, #fff0dd 0%, rgba(255, 240, 221, 0) 60%);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+body.has-modal { overflow: hidden; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, p, figure, blockquote { margin: 0; }
+
+a { color: var(--red-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+::selection { background: var(--gold-soft); color: var(--ink); }
+
+/* Bỏ qua tới lá thư — chỉ hiện khi được focus bằng bàn phím */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding: 12px 20px;
+  border-radius: 0 0 14px 14px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .2s ease;
+}
+.skip-link:focus { top: 0; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+section { position: relative; overflow: hidden; }
+section[id] { scroll-margin-top: 20px; }
+
+/* --------------------------------------------------------------------------
+   3. TIỆN ÍCH DÙNG CHUNG
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55em;
+  padding: .9rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.1;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+  background-image: linear-gradient(135deg, var(--red), var(--red-deep));
+  color: #fff8f4;
+  box-shadow: 0 14px 26px -14px rgba(197, 63, 53, .8);
+}
+.btn--primary:hover { box-shadow: 0 20px 34px -14px rgba(197, 63, 53, .85); }
+
+.btn--ghost {
+  background-color: rgba(255, 255, 255, .55);
+  border: 1.5px solid rgba(42, 31, 43, .16);
+  color: var(--ink);
+}
+.btn--ghost:hover { border-color: rgba(42, 31, 43, .34); background-color: #fff; }
+
+.btn--mini {
+  padding: .5rem .95rem;
+  font-size: .84rem;
+  background-color: var(--paper-2);
+  border: 1.5px solid rgba(42, 31, 43, .14);
+  color: var(--ink);
+}
+
+/* Ảnh trang trí — không bao giờ chặn cú click */
+.deco {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 10px 14px rgba(42, 31, 43, .12));
+}
+
+/* Tiêu đề chung của từng phần */
+.sec-head {
+  position: relative;
+  z-index: 2;
+  max-width: 46ch;
+  margin: 0 auto clamp(30px, 5vw, 52px);
+  padding-inline: 18px;
+  text-align: center;
+}
+.sec-head__kicker {
+  margin-bottom: .45em;
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.sec-head__title {
+  font-family: var(--font-zh);
+  font-size: clamp(1.9rem, 6.2vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: .02em;
+}
+.sec-head__sub {
+  margin-top: .5em;
+  font-size: clamp(.95rem, 2.5vw, 1.06rem);
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO — tấm thiệp mở đầu
+   -------------------------------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(84px, 15vh, 150px) clamp(18px, 5vw, 40px) clamp(58px, 9vh, 92px);
+  overflow: hidden;
+}
+
+.hero__glow {
+  position: absolute;
+  inset: auto 50% -28% auto;
+  width: min(120vw, 900px);
+  aspect-ratio: 1;
+  translate: 50% 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 206, 128, .42), rgba(255, 206, 128, 0) 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+
+.deco--cloud-a { top: 11%; left: -9%; width: clamp(88px, 22vw, 190px); opacity: .95; }
+.deco--cloud-b { top: 27%; right: -7%; width: clamp(66px, 17vw, 152px); opacity: .8; scale: -1 1; }
+.deco--balloon-a { top: 7%; right: 3%; width: clamp(44px, 11vw, 94px); }
+.deco--balloon-b { top: 16%; left: 2%; width: clamp(36px, 9vw, 78px); scale: -1 1; }
+.deco--heart-a { bottom: 20%; left: 7%; width: clamp(20px, 5vw, 38px); opacity: .9; }
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: clamp(30px, 6vw, 54px);
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+}
+
+.hero__copy {
+  display: grid;
+  justify-items: center;
+  gap: clamp(13px, 2.3vw, 19px);
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hero__title { display: grid; gap: .12em; }
+
+.hero__zh {
+  font-family: var(--font-zh);
+  font-size: clamp(3rem, 13vw, 6.4rem);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: .02em;
+  color: var(--red); /* fallback nếu trình duyệt không hỗ trợ background-clip:text */
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .hero__zh {
+    background-image: linear-gradient(168deg, #ef5a52 0%, var(--red-deep) 52%, #a72f2a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.hero__vi {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5.4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.hero__to { font-size: clamp(1rem, 2.7vw, 1.15rem); color: var(--ink); }
+.hero__to strong { color: var(--red-deep); }
+.hero__to [lang="zh-Hans"] { font-family: var(--font-zh); }
+
+.hero__lead {
+  max-width: 44ch;
+  color: var(--ink-soft);
+  font-size: clamp(.95rem, 2.5vw, 1.05rem);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: .35em;
+}
+
+.hero__art { display: grid; justify-items: center; }
+
+/* flag.png là hình minh hoạ chính của hero: nằm trong luồng, không tuyệt đối */
+.deco--flag {
+  position: relative;
+  width: min(58vw, 250px);
+  filter: drop-shadow(0 26px 30px rgba(42, 31, 43, .18));
+}
+
+.hero__cue {
+  position: absolute;
+  bottom: clamp(10px, 2vh, 22px);
+  left: 50%;
+  translate: -50% 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  font-size: .74rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  z-index: 2;
+  pointer-events: none;
+}
+.hero__cue-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__eyebrow { animation: rise-in .7s .06s both; }
+  .hero__title  { animation: rise-in .9s .16s both; }
+  .hero__to     { animation: rise-in .8s .3s both; }
+  .hero__lead   { animation: rise-in .8s .4s both; }
+  .hero__actions{ animation: rise-in .8s .5s both; }
+  .hero__art    { animation: fade-in 1.1s .34s both; }
+  .deco--cloud-a { animation: fade-in .9s .2s both, cloud-drift 13s ease-in-out infinite; }
+  .deco--cloud-b { animation: fade-in .9s .32s both, cloud-drift 17s ease-in-out infinite reverse; }
+  .deco--balloon-a { animation: fade-in .8s .45s both; }
+  .deco--balloon-b { animation: fade-in .8s .55s both; }
+  .deco--heart-a { animation: fade-in .8s .7s both, heart-beat 3.6s ease-in-out 1.6s infinite; }
+  .deco--flag { animation: float-slow 7s ease-in-out infinite; }
+  .hero__cue-dot { animation: cue-bob 1.9s ease-in-out infinite; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes cloud-drift {
+  0%, 100% { transform: translateX(0); }
+  50%      { transform: translateX(14px); }
+}
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  12%      { transform: scale(1.16); }
+  24%      { transform: scale(1); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-11px); }
+}
+@keyframes cue-bob {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%      { transform: translateY(6px); opacity: .55; }
+}
+
+/* --------------------------------------------------------------------------
+   5. KHOẢNH KHẮC — ảnh dán kiểu scrapbook
+   -------------------------------------------------------------------------- */
+.photo {
+  padding: clamp(64px, 12vh, 138px) clamp(18px, 5vw, 40px);
+}
+
+.photo__deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+
+.deco--cute1 { top: 5%; left: 5%; width: clamp(38px, 9vw, 70px); rotate: -12deg; opacity: .9; }
+.deco--cute2 { top: 9%; right: 3%; width: clamp(64px, 16vw, 148px); rotate: 9deg; opacity: .9; }
+.deco--gift  { bottom: 11%; left: 4%; width: clamp(46px, 11vw, 84px); rotate: -7deg; }
+.deco--heart-b { bottom: 17%; right: 7%; width: clamp(22px, 5vw, 40px); rotate: 13deg; opacity: .85; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .deco--cute1 { animation: fade-in .8s .2s both; }
+  .deco--cute2 { animation: fade-in .8s .3s both; }
+  .deco--gift  { animation: fade-in .8s .4s both; }
+  .deco--heart-b { animation: fade-in .8s .5s both; }
+}
+
+.polaroid {
+  position: relative;
+  z-index: 2;
+  width: min(440px, 88vw);
+  margin-inline: auto;
+  padding: 15px 15px 0;
+  background: linear-gradient(178deg, #fffefb, #fdf8f0);
+  border-radius: 4px;
+  rotate: -1.6deg;
+  box-shadow:
+    0 34px 64px -30px rgba(42, 31, 43, .5),
+    0 1px 0 rgba(255, 255, 255, .7) inset;
+}
+
+.polaroid__img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.polaroid__cap {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  padding: 15px 8px 22px;
+  text-align: center;
+}
+
+.polaroid__tape {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  translate: -50% 0;
+  width: clamp(92px, 30%, 132px);
+  height: 30px;
+  border-radius: 2px;
+  rotate: -3deg;
+  background-image: linear-gradient(180deg, rgba(255, 240, 190, .92), rgba(246, 217, 154, .72));
+  box-shadow: 0 3px 8px rgba(42, 31, 43, .14);
+}
+
+.polaroid__love {
+  font-family: var(--font-zh);
+  font-size: clamp(1.25rem, 4.2vw, 1.6rem);
+  font-weight: 700;
+  color: var(--red-deep);
+}
+.polaroid__note { font-size: .9rem; color: var(--ink-soft); }
+
+.photo__quote {
+  position: relative;
+  z-index: 2;
+  max-width: 40ch;
+  margin: clamp(30px, 5vw, 50px) auto 0;
+  padding-inline: 20px;
+  font-family: var(--font-zh);
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  line-height: 1.95;
+  text-align: center;
+  color: var(--ink-soft);
+}
+.photo__quote::before,
+.photo__quote::after {
+  font-family: var(--font-display);
+  font-size: 2.2em;
+  line-height: 0;
+  color: var(--gold);
+  vertical-align: -.34em;
+}
+.photo__quote::before { content: '“'; margin-right: .08em; }
+.photo__quote::after  { content: '”'; margin-left: .08em; }
+.photo__quote footer {
+  margin-top: .9em;
+  font-family: var(--font-body);
+  font-size: .84rem;
+  letter-spacing: .04em;
+  color: var(--ink-soft);
+  opacity: .78;
+}
+
+/* --------------------------------------------------------------------------
+   6. ĐIỀU ƯỚC — dải trời đêm, bánh sinh nhật, pháo hoa
+   -------------------------------------------------------------------------- */
+.wish {
+  isolation: isolate;
+  padding: clamp(72px, 13vh, 152px) clamp(18px, 5vw, 40px);
+  color: var(--moon);
+  background-image: radial-gradient(128% 84% at 50% 0%, #3a2551 0%, var(--night-2) 34%, var(--night) 62%, var(--night-3) 100%);
+}
+
+.wish__sky {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+.wish__sky::before,
+.wish__sky::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 220px 220px;
+}
+.wish__sky::before {
+  background-image:
+    radial-gradient(1.6px 1.6px at 24px 42px, rgba(255, 255, 255, .9), transparent),
+    radial-gradient(1.4px 1.4px at 132px 118px, rgba(255, 255, 255, .7), transparent),
+    radial-gradient(1.2px 1.2px at 186px 26px, rgba(255, 255, 255, .8), transparent);
+  animation: twinkle 6.5s ease-in-out infinite;
+}
+.wish__sky::after {
+  background-image:
+    radial-gradient(1.2px 1.2px at 68px 176px, rgba(255, 236, 190, .85), transparent),
+    radial-gradient(1.8px 1.8px at 158px 74px, rgba(214, 236, 255, .7), transparent),
+    radial-gradient(1.2px 1.2px at 96px 8px, rgba(255, 255, 255, .6), transparent);
+  animation: twinkle 9s ease-in-out 1.4s infinite reverse;
+}
+
+/* Vignette điện ảnh, nằm dưới nội dung */
+.wish::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(78% 62% at 50% 46%, rgba(0, 0, 0, 0) 38%, rgba(8, 5, 18, .58) 100%);
+  pointer-events: none;
+}
+
+.wish__fx {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.wish__inner {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  gap: clamp(22px, 4vw, 36px);
+  max-width: var(--maxw);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.wish .sec-head { margin-bottom: 0; }
+.wish .sec-head__kicker { color: var(--gold); }
+.wish .sec-head__sub { color: rgba(246, 236, 255, .72); }
+
+@keyframes twinkle {
+  0%, 100% { opacity: .85; }
+  50%      { opacity: .35; }
+}
+
+/* --- Chiếc bánh: một <button> thật, bấm được bằng chuột lẫn bàn phím --- */
+.cake {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: clamp(12px, 2.2vw, 20px);
+  margin-inline: auto;
+  padding: 8px;
+  background: none;
+  border: 0;
+  border-radius: 30px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.cake:focus-visible { outline-offset: 12px; }
+
+.cake__img {
+  position: relative;
+  z-index: 2;
+  width: clamp(196px, 42vw, 320px);
+  filter: drop-shadow(0 24px 34px rgba(0, 0, 0, .45));
+  transition: filter .5s ease, transform .3s ease;
+}
+.cake:hover .cake__img { transform: translateY(-3px); }
+
+.cake__glow {
+  position: absolute;
+  top: clamp(16px, 6%, 52px);
+  left: 50%;
+  width: 46%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 214, 130, .95), rgba(255, 158, 70, .3) 46%, rgba(255, 158, 70, 0) 72%);
+  filter: blur(5px);
+  z-index: 1;
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.cake__smoke {
+  position: absolute;
+  top: clamp(8px, 3%, 30px);
+  left: 50%;
+  width: 76px;
+  height: 110px;
+  translate: -50% -100%;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 50% 60%, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 68%);
+  filter: blur(9px);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.cake__cta {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: .78rem 1.35rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, .1);
+  border: 1.5px solid rgba(255, 236, 200, .38);
+  color: var(--moon);
+  font-weight: 600;
+  letter-spacing: .04em;
+  transition: background-color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.cake:hover .cake__cta { background-color: rgba(255, 255, 255, .18); border-color: rgba(255, 236, 200, .6); }
+.cake:active .cake__cta { transform: translateY(1px); }
+
+/* Trạng thái đã thổi nến */
+.cake.is-blown .cake__glow {
+  opacity: 0;
+  transform: scale(.55);
+}
+.cake.is-blown .cake__img {
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, .5)) brightness(.82) saturate(.85);
+  animation: none;
+}
+.cake.is-blown .cake__smoke { animation: smoke-rise 2.6s ease-out forwards; }
+.cake.is-blown .cake__cta {
+  background-color: rgba(255, 255, 255, .16);
+  border-color: rgba(255, 236, 200, .55);
+}
+
+@keyframes smoke-rise {
+  0%   { opacity: 0; transform: translateY(6px) scale(.7); }
+  22%  { opacity: .75; }
+  100% { opacity: 0; transform: translateY(-64px) scale(1.5); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cake:not(.is-blown) .cake__glow { animation: candle-flicker 2.6s ease-in-out infinite; }
+}
+@keyframes candle-flicker {
+  0%, 100% { opacity: .95; transform: scale(1); }
+  38%      { opacity: .74; transform: scale(.94) translateX(-1px); }
+  62%      { opacity: 1;   transform: scale(1.05) translateX(1px); }
+}
+
+.wish__status {
+  min-height: 1.5em; /* giữ chỗ để câu chữ đổi mà bố cục không nhảy */
+  font-size: clamp(.9rem, 2.4vw, 1rem);
+  color: rgba(246, 236, 255, .82);
+}
+
+/* --------------------------------------------------------------------------
+   7. LÁ THƯ — phong bì có con dấu sáp
+   -------------------------------------------------------------------------- */
+.letter { padding: clamp(64px, 12vh, 138px) clamp(18px, 5vw, 40px); }
+
+.letterbox { max-width: 720px; margin-inline: auto; }
+
+.envelope {
+  display: grid;
+  justify-items: center;
+  gap: clamp(16px, 3vw, 24px);
+  padding: clamp(18px, 4vw, 34px) 0;
+  border-radius: 24px;
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.envelope::-webkit-details-marker { display: none; }
+.envelope::marker { content: ''; }
+
+.envelope__visual {
+  position: relative;
+  width: clamp(228px, 58vw, 358px);
+  aspect-ratio: 1.6 / 1;
+  filter: drop-shadow(0 28px 34px rgba(42, 31, 43, .26));
+  transition: transform .45s cubic-bezier(.34, 1.2, .5, 1);
+}
+.envelope:hover .envelope__visual { transform: translateY(-5px); }
+
+.envelope__back {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background-image: linear-gradient(160deg, #ffe7cf, #f8cfa4);
+  box-shadow: inset 0 0 0 1px rgba(42, 31, 43, .07);
+  perspective: 700px;
+}
+/* Nắp trên của phong bì: tam giác úp xuống, bật lên khi mở */
+.envelope__back::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: 12px 12px 0 0;
+  background-image: linear-gradient(180deg, #ffdcb6, #f7c793);
+  clip-path: polygon(0 0, 50% 58%, 100% 0);
+  transform-origin: top center;
+  backface-visibility: hidden;
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+
+.envelope__letter {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 9%;
+  z-index: 2;
+  height: 74%;
+  border-radius: 6px;
+  background-image: linear-gradient(180deg, #fffdf8, #fff7ea);
+  box-shadow: 0 -3px 12px rgba(42, 31, 43, .12);
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+}
+.envelope:hover .envelope__letter { transform: translateY(-18%); }
+
+.envelope__front {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  border-radius: 12px;
+  background-image: linear-gradient(200deg, #ffead6, #f9cda6);
+  clip-path: polygon(0 100%, 0 20%, 50% 62%, 100% 20%, 100% 100%);
+}
+
+.envelope__seal {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  z-index: 6;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: clamp(42px, 9vw, 54px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 34% 30%, #f06a5f, var(--red-deep));
+  color: #ffeede;
+  font-family: var(--font-script);
+  font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+  line-height: 1;
+  box-shadow: 0 7px 16px rgba(120, 20, 20, .38), inset 0 0 0 1px rgba(255, 255, 255, .26);
+  transition: transform .4s ease, opacity .35s ease;
+}
+.envelope:hover .envelope__seal { transform: rotate(-9deg) scale(1.06); }
+
+.envelope__cta { display: grid; gap: 4px; justify-items: center; }
+.envelope__cta-main {
+  font-weight: 600;
+  font-size: clamp(1rem, 2.6vw, 1.1rem);
+  color: var(--red-deep);
+}
+.envelope__cta-hint {
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* Khi thư đã mở: nắp phong bì bật lên, tờ giấy trồi ra */
+.letterbox[open] .envelope__back::after { transform: rotateX(-158deg); }
+.letterbox[open] .envelope__letter { transform: translateY(-34%); }
+.letterbox[open] .envelope__seal { opacity: 0; transform: scale(1.5); }
+.letterbox[open] .envelope__cta-main { color: var(--ink-soft); }
+
+/* --- Lá thư: khối giấy. Không có JS thì đây là nội dung chảy bình thường --- */
+.lettercard { margin-top: clamp(18px, 3vw, 28px); }
+
+.lettercard__panel {
+  position: relative;
+  z-index: 1;
+  padding: clamp(18px, 3.4vw, 28px);
+  border-radius: var(--radius);
+  background-image: linear-gradient(180deg, var(--paper-3), #fff8ef);
+  box-shadow: var(--shadow-card);
+}
+
+.lettercard__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(42, 31, 43, .16);
+}
+.lettercard__to {
+  font-family: var(--font-zh);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  color: var(--red-deep);
+}
+
+.lettercard__close {
+  display: none;
+  align-items: center;
+  gap: .4em;
+  padding: .45rem .8rem;
+  border: 1.5px solid rgba(42, 31, 43, .14);
+  border-radius: 999px;
+  background-color: var(--paper-2);
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lettercard__body {
+  margin-top: 14px;
+  padding-right: 4px;
+  font-family: var(--font-zh);
+  font-size: clamp(1rem, 2.3vw, 1.12rem);
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  color: var(--ink);
+  -webkit-overflow-scrolling: touch;
+}
+.lettercard__body p + p { margin-top: .5em; }
+.lettercard__body.is-typing { text-align: left; } /* đang gõ thì đừng căn đều */
+.lettercard__body:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+.lettercard__foot {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(42, 31, 43, .16);
+}
+.lettercard__progress { font-size: .8rem; color: var(--ink-soft); }
+
+/* Khi JS chạy: thư mở thành lớp phủ toàn màn hình, cuộn được bên trong */
+.letterbox.is-enhanced .lettercard__close { display: inline-flex; }
+.letterbox.is-enhanced .lettercard__foot { display: flex; }
+
+.letterbox.is-enhanced[open] .lettercard {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  margin: 0;
+  padding: clamp(10px, 3vw, 32px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+/* Scrim (nền mờ). z-index 0 để panel z-index 1 nằm trên */
+.letterbox.is-enhanced[open] .lettercard::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(30, 20, 34, .64);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.letterbox.is-enhanced[open] .lettercard__panel {
+  width: min(680px, 100%);
+  max-height: 86vh;
+  max-height: 86dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(18px, 3.4vw, 30px);
+}
+.letterbox.is-enhanced[open] .lettercard__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+/* --------------------------------------------------------------------------
+   8. CHÂN TRANG
+   -------------------------------------------------------------------------- */
+.foot {
+  position: relative;
+  padding: clamp(60px, 11vh, 118px) clamp(18px, 5vw, 40px) clamp(104px, 16vh, 152px);
+  text-align: center;
+  background-image: linear-gradient(180deg, var(--paper-2), var(--paper) 62%);
+  overflow: hidden;
+}
+.deco--heart-c {
+  top: 16%;
+  right: 8%;
+  width: clamp(20px, 5vw, 38px);
+  rotate: 10deg;
+  opacity: .5;
+}
+
+.foot__zh {
+  font-family: var(--font-zh);
+  font-size: clamp(1.35rem, 4.6vw, 2.05rem);
+  font-weight: 700;
+  color: var(--red-deep);
+}
+.foot__sig {
+  margin-top: .18em;
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 9vw, 4rem);
+  line-height: 1;
+  color: var(--ink);
+}
+.foot__note {
+  max-width: 50ch;
+  margin: 16px auto 0;
+  font-size: clamp(.9rem, 2.4vw, .98rem);
+  color: var(--ink-soft);
+}
+.foot__meta {
+  margin-top: 22px;
+  font-size: .8rem;
+  color: var(--ink-soft);
+  opacity: .82;
+}
+
+/* --------------------------------------------------------------------------
+   9. NHẠC NỀN — chỉ phát khi người dùng bấm
+   -------------------------------------------------------------------------- */
+.dock {
+  position: fixed;
+  right: clamp(12px, 2vw, 24px);
+  bottom: clamp(12px, 2vw, 24px);
+  z-index: 80;
+  /* Mặc định ẩn: chỉ hiện khi script.js chạy được và thêm class .js-ready.
+     Nhờ vậy không bao giờ có nút chết trên trang. */
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.js-ready .dock { display: flex; }
+
+.dock__label { line-height: 1.25; }
+
+.dock__play {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  padding: .6rem .95rem .6rem .7rem;
+  border: 1px solid rgba(42, 31, 43, .12);
+  border-radius: 999px;
+  background-color: rgba(255, 253, 249, .93);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 26px -14px rgba(42, 31, 43, .5);
+  font: inherit;
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.dock__play:hover { transform: translateY(-2px); }
+.dock__play:active { transform: translateY(1px); }
+
+.dock__disc {
+  position: relative;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: repeating-radial-gradient(circle at 50% 50%, #3a2f3a 0 1.5px, #241d26 1.5px 3.5px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14);
+}
+.dock__disc::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background-color: var(--gold);
+}
+.dock__play[aria-pressed="true"] .dock__disc::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  width: 2px;
+  height: 8px;
+  translate: -50% 0;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dock__play[aria-pressed="true"] .dock__disc { animation: spin 4.5s linear infinite; }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.dock__switch {
+  padding: .42rem .8rem;
+  border: 1px solid rgba(42, 31, 43, .12);
+  border-radius: 999px;
+  background-color: rgba(255, 253, 249, .9);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+.dock__switch[hidden] { display: none; }
+
+.dock__status {
+  max-width: 22ch;
+  margin: 0;
+  font-size: .74rem;
+  line-height: 1.4;
+  text-align: right;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   10. HIỆU ỨNG CUỘN (chỉ khi GSAP đã sẵn sàng)
+   --------------------------------------------------------------------------
+   `.gsap-ready` do script.js thêm vào <html> SAU KHI GSAP + ScrollTrigger
+   tải xong. Nếu GSAP lỗi thì class này không bao giờ xuất hiện và mọi nội
+   dung vẫn hiện đầy đủ — trang không bao giờ trắng.
+   -------------------------------------------------------------------------- */
+.gsap-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: transform, opacity;
+}
+
+/* --------------------------------------------------------------------------
+   11. MÀN HÌNH LỚN
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .wish__sky::before,
+  .wish__sky::after { background-size: 260px 260px; }
+}
+
+@media (min-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    align-items: center;
+  }
+  .hero__copy {
+    justify-items: start;
+    max-width: none;
+    margin-inline: 0;
+    text-align: left;
+  }
+  .hero__lead { max-width: 42ch; }
+  .hero__actions { justify-content: flex-start; }
+  .hero__art { justify-items: end; }
+  .deco--flag { width: min(34vw, 400px); }
+
+  .deco--cloud-a { left: -4%; width: clamp(120px, 15vw, 210px); }
+  .deco--cloud-b { right: -3%; width: clamp(100px, 12vw, 168px); }
+  .deco--balloon-a { top: 8%; right: 5%; width: clamp(64px, 7vw, 104px); }
+  .deco--balloon-b { top: 20%; left: 5%; width: clamp(52px, 6vw, 88px); }
+  .deco--heart-a { bottom: 16%; left: 12%; width: 34px; }
+
+  .deco--cute1 { top: 7%; left: 12%; width: 66px; }
+  .deco--cute2 { top: 12%; right: 10%; width: clamp(110px, 11vw, 160px); }
+  .deco--gift { bottom: 14%; left: 11%; width: clamp(74px, 7vw, 96px); }
+  .deco--heart-b { bottom: 20%; right: 14%; width: 38px; }
+
+  .polaroid { width: min(430px, 42vw); }
+}
+
+/* --------------------------------------------------------------------------
+   12. MÀN HÌNH NHỎ / THẤP — bớt trang trí cho gọn
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .deco--cloud-b,
+  .deco--heart-a,
+  .deco--cute1,
+  .deco--heart-b { display: none; }
+}
+
+@media (max-height: 700px) and (min-width: 480px) {
+  .hero { min-height: auto; padding-block: 96px 72px; }
+  .hero__zh { font-size: clamp(2.6rem, 9vw, 4.2rem); }
+}
+
+/* --------------------------------------------------------------------------
+   13. KHI KHÔNG CÓ JAVASCRIPT
+   -------------------------------------------------------------------------- */
+.no-js .lettercard__close,
+.no-js .lettercard__foot { display: none; }
+
+/* --------------------------------------------------------------------------
+   14. GIẢM CHUYỂN ĐỘNG — ưu tiên sức khoẻ người xem
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gsap-ready .reveal { opacity: 1; transform: none; }
+}

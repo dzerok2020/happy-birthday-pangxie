@@ -1,181 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chúc mừng sinh nhật · 生日快乐 Pangxie</title>
+<meta name="description" content="Một món quà nhỏ làm bằng code, gửi tới Pangxie nhân ngày sinh nhật.">
+<meta name="theme-color" content="#fff7ee">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="heart.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chúc mừng sinh nhật, Pangxie 🎂">
+<meta property="og:description" content="Một món quà nhỏ làm bằng code — có ảnh, có bánh, có một lá thư.">
+<meta property="og:image" content="Picture3.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&amp;family=Cormorant+Garamond:wght@600;700&amp;family=Dancing+Script:wght@600&amp;family=Noto+Serif+SC:wght@600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Đổi no-js -> js để CSS biết JavaScript đã bật. Không có JS thì trang vẫn hiển thị đầy đủ. */
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+</script>
+</head>
+<body>
 
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<title>Happy birthday</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="boxcontainer">
-				<div class="image">
-					<img src="flag.png" alt="" />
-				</div>
-				<div class="text-happybirthday">
-					<img src="texthappy.png" alt="" />
-				</div>
-				<div class="cake">
-					<img src="cake.png" alt="" />
-				</div>
-				<div class="box-balloon">
-					<div class="balloon-item1">
-						<img src="balloon.png" alt="" />
-					</div>
-					<div class="balloon-item1">
-						<img src="balloon.png" alt="" />
-					</div>
-				</div>
-				<div class="box-cloud">
-					<div class="cloud">
-						<img src="cloud.png" alt="" />
-					</div>
-					<div class="cloud">
-						<img src="cloud.png" alt="" />
-					</div>
-				</div>
-				<div class="box-firework">
-					<div class="firework">
-						<img src="firework.png" alt="" />
-						<img src="firework1.png" alt="" id="firework1" />
-					</div>
-					<div class="firework">
-						<img src="firework.png" alt="" />
-						<img src="firework1.png" alt="" id="firework1" />
-					</div>
-				</div>
-				<div class="paperCannons">
-					<img src="paperCannons1.png" alt="" />
-				</div>
-				<div class="box-giftbox">
-					<img src="giftbox.png" alt="" />
-					<img src="giftbox.png" alt="" />
-					<img src="giftbox.png" alt="" />
-					<img src="giftbox.png" alt="" />
-					<img src="giftbox.png" alt="" />
-					<img src="giftbox.png" alt="" />
-				</div>
-				<div class="mail">
-					<i class="fa-regular fa-envelope"></i>
-				</div>
-				<div class="boxcute">
-					<div class="cute1">
-						<img src="cute.png" alt="" />
-					</div>
-					<div class="cute2">
-						<img src="cute3.png" alt="" />
-					</div>
-				</div>
-			</div>
-			<div class="boxMail">
-				<i class="fa-solid fa-xmark"></i>
-				<div class="boxMail-container">
-					<div class="card1">
-						<div class="userImg">
-							<img src="Picture3.jpg" alt="" />
-						</div>
-						<h3>生日快乐</h3>
-						<div class="imageCute">
-							<img src="cute1.png" alt="" />
-						</div>
-					</div>
-					<div class="card2">
-						<div class="card2-content">
-							<h3>送小公主!</h3>
-							<div class="h2">
-							<h2>
-								
-							</h2>
-							<div class="img1"><img class="img" src="" alt=""></div>
-							
-							</div>
-							<div class="imageCute2">
-								<img src="cute2.png" alt="" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<audio id="birthdayAudio" src="https://dzerok2020.github.io/happy-birthday-pangxie/nhac1.mp3" loop></audio>
-		</body>
-	<script>
-	  const mainContentLetter = "今天是我小公主的特别日子。👸🎉 祝小公主度过一个有意义、快乐和幸福的生日。🎂🎈 希望在新的一年里，你充满健康 💪、活力和快乐 ☺️。希望你的每一步都带来美好的经历和难忘的时刻。今年，我希望你始终保持乐观的心态 😊，并随时准备迎接挑战。请记住，每一次困境都是你成长和进步的机会。11虽然我不在你身边，没有送上任何对你有意义的礼物，但我始终期望着你的幸福。🎁 我只能用IT的美丽作为礼物给你，虽然这只是一个界面而不是一个实际的礼物，但我希望它能成为在你特别的日子里的一份有意义的心意。🎨11我会一直在你身边，支持和鼓励你，所以遇到困难时千万不要放弃。❤️11最后，祝小公主在TikTok上吸引更多的关注🎵，让更多的人认识你，也希望你永远收到大人们的大礼物。11生日快乐，小公主！🎉🎂🌟 1充满爱的祝福，1ZERO "
-	  
-	  const card2 = document.querySelector(".card2");
-	  const birthdayAudio = document.getElementById('birthdayAudio');
-	  let i = 0;
-	
-	  card2.addEventListener("mouseenter", function() {
-		  
-	      if (i === 0) {
-        const splitMainContentLetter = mainContentLetter.split("");
-        
-        setTimeout(function () {
-          splitMainContentLetter.forEach((val, index) => {
-            const effectType = setTimeout(() => {
-              const h2Element = document.querySelector(".h2 h2");
-              let currentText = h2Element.innerHTML.replace(/❤️$/, "");
+<a class="skip-link" href="#letter">Bỏ qua phần trang trí, tới lá thư</a>
 
-              if (val !== "1") {
-                h2Element.innerHTML = currentText + val + "❤️";
-              } else {
-                h2Element.innerHTML = currentText + "<br>";
-              }
-              const mainContent = document.querySelector(".h2");
-              mainContent.scrollTop = mainContent.scrollHeight;
-            }, 50 * index);
-          });
-          i++;
-        }, 4000);
-		      
-	      }
-	  })
-	  
-	  
-		document.addEventListener('mousemove', function (e) {
-			let body = document.querySelector('body');
-			let heart = document.createElement('span');
-			let x = e.offsetX;
-			let y = e.offsetY;
-			heart.style.left = x + 'px';
-			heart.style.top = y + 'px';
+<main id="main">
 
-			let size = Math.random() * 10;
-			heart.style.width = 4 * size + 'px';
-			heart.style.height = 4 * size + 'px';
+  <!-- ============================================================
+       1. HERO — thiệp chúc mừng
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
 
-			let transformValue = Math.random() * 360;
-			heart.style.transform = 'rotate(' + transformValue + 'deg)';
+    <div class="hero__deco" aria-hidden="true">
+      <img class="deco deco--cloud-a" src="cloud.png" alt="" width="1426" height="706" fetchpriority="high" decoding="async">
+      <img class="deco deco--cloud-b" src="cloud.png" alt="" width="1426" height="706" decoding="async">
+      <img class="deco deco--balloon-a" src="balloon.png" alt="" width="1953" height="4048" decoding="async">
+      <img class="deco deco--balloon-b" src="balloon.png" alt="" width="1953" height="4048" decoding="async">
+      <img class="deco deco--heart-a" src="heart.png" alt="" width="1200" height="1200" decoding="async">
+    </div>
 
-			body.appendChild(heart);
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Hôm nay là một ngày thật đặc biệt</p>
+        <h1 class="hero__title">
+          <span class="hero__zh" lang="zh-Hans">生日快乐</span>
+          <span class="hero__vi">Chúc mừng sinh nhật</span>
+        </h1>
+        <p class="hero__to">Gửi <strong>Pangxie</strong> — <span lang="zh-Hans">小公主</span> của ngày hôm nay</p>
+        <p class="hero__lead">Món quà nhỏ này được làm bằng code — thay cho những lời chúc dài hơn. Bên trong có một tấm ảnh, một chiếc bánh để thổi nến, và một lá thư.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#photo">Mở món quà <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--ghost" href="#letter">Đọc thư trước</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <img class="deco deco--flag" src="flag.png" alt="" width="900" height="900" decoding="async">
+      </div>
+    </div>
 
-			setTimeout(function () {
-				heart.remove();
-			}, 1000);
-		});
+    <p class="hero__cue" aria-hidden="true"><span class="hero__cue-dot"></span>cuộn xuống</p>
+  </section>
 
-		let mailBox = document.querySelector('.mail');
-		let boxmail = document.querySelector('.boxMail');
-		var close = document.querySelector('.fa-xmark');
-		mailBox.onclick = function () {
-			mailBox.classList.toggle('active');
-			boxmail.classList.add('active');
-			birthdayAudio.play();
-		};
 
-		close.addEventListener('click', function () {
-			boxmail.classList.remove('active');
-			birthdayAudio.paused;
-		});
-	</script>
+  <!-- ============================================================
+       2. KHOẢNH KHẮC — tấm ảnh dán kiểu scrapbook
+       ============================================================ -->
+  <section class="photo" id="photo">
+    <div class="photo__deco" aria-hidden="true">
+      <img class="deco deco--cute1" src="cute1.png" alt="" width="413" height="438" loading="lazy" decoding="async">
+      <img class="deco deco--cute2" src="cute2.png" alt="" width="1734" height="2500" loading="lazy" decoding="async">
+      <img class="deco deco--gift" src="giftbox.png" alt="" width="275" height="333" loading="lazy" decoding="async">
+      <img class="deco deco--heart-b" src="heart.png" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+    </div>
+
+    <header class="sec-head reveal">
+      <p class="sec-head__kicker">Khoảnh khắc</p>
+      <h2 class="sec-head__title" lang="zh-Hans">今天的小公主</h2>
+      <p class="sec-head__sub">Công chúa nhỏ của ngày hôm nay</p>
+    </header>
+
+    <figure class="polaroid reveal">
+      <img class="polaroid__img" src="Picture3.jpg"
+           alt="Ảnh của Pangxie — nhân vật chính của ngày hôm nay"
+           width="1563" height="1563" loading="lazy" decoding="async">
+      <figcaption class="polaroid__cap">
+        <span class="polaroid__tape" aria-hidden="true"></span>
+        <span class="polaroid__love" lang="zh-Hans">生日快乐</span>
+        <span class="polaroid__note">Mong nụ cười này luôn ở lại</span>
+      </figcaption>
+    </figure>
+
+    <blockquote class="photo__quote reveal">
+      <p lang="zh-Hans">希望你的每一步都带来美好的经历和难忘的时刻</p>
+      <footer>— trích từ lá thư bên dưới</footer>
+    </blockquote>
+  </section>
+
+
+  <!-- ============================================================
+       3. ĐIỀU ƯỚC — dải trời đêm, bánh sinh nhật, pháo hoa
+       ============================================================ -->
+  <section class="wish" id="wish">
+    <div class="wish__sky" aria-hidden="true"></div>
+    <canvas class="wish__fx" id="fx" aria-hidden="true"></canvas>
+
+    <div class="wish__inner">
+      <header class="sec-head reveal">
+        <p class="sec-head__kicker">Điều ước</p>
+        <h2 class="sec-head__title" lang="zh-Hans">许个愿吧</h2>
+        <p class="sec-head__sub">Nhắm mắt lại, nghĩ tới điều em muốn nhất</p>
+      </header>
+
+      <button class="cake reveal" id="cakeBtn" type="button" aria-pressed="false">
+        <span class="cake__glow" aria-hidden="true"></span>
+        <img class="cake__img" src="cake.png" alt="" width="2300" height="3066" loading="lazy" decoding="async">
+        <span class="cake__smoke" aria-hidden="true"></span>
+        <span class="cake__cta" id="cakeCta">Thổi nến</span>
+      </button>
+
+      <p class="wish__status" id="wishStatus" role="status" aria-live="polite">Chạm vào chiếc bánh để thổi nến.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       4. LÁ THƯ — phong bì có con dấu sáp mở ra thành lá thư
+       Dùng <details> nên KHÔNG cần JavaScript vẫn đọc được thư.
+       ============================================================ -->
+  <section class="letter" id="letter">
+    <header class="sec-head reveal">
+      <p class="sec-head__kicker">Lá thư</p>
+      <h2 class="sec-head__title" lang="zh-Hans">送小公主!</h2>
+      <p class="sec-head__sub">Bức thư được gửi kèm với món quà này</p>
+    </header>
+
+    <details class="letterbox reveal" id="letterbox">
+      <summary class="envelope" id="envelope">
+        <span class="envelope__visual" aria-hidden="true">
+          <span class="envelope__back"></span>
+          <span class="envelope__letter"></span>
+          <span class="envelope__front"></span>
+          <span class="envelope__seal">Z</span>
+        </span>
+        <span class="envelope__cta">
+          <span class="envelope__cta-main">Mở lá thư</span>
+          <span class="envelope__cta-hint">bấm để mở</span>
+        </span>
+      </summary>
+
+      <article class="lettercard" id="lettercard" lang="zh-Hans" aria-labelledby="letterTitle">
+        <div class="lettercard__panel">
+        <div class="lettercard__bar">
+          <h3 class="lettercard__to" id="letterTitle">送小公主!</h3>
+          <button class="lettercard__close" id="letterClose" type="button">
+            Đóng <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="lettercard__body" id="letterBody" tabindex="0">
+          <p>今天是我小公主的特别日子。👸🎉 祝小公主度过一个有意义、快乐和幸福的生日。🎂🎈 希望在新的一年里，你充满健康 💪、活力和快乐 ☺️。希望你的每一步都带来美好的经历和难忘的时刻。今年，我希望你始终保持乐观的心态 😊，并随时准备迎接挑战。请记住，每一次困境都是你成长和进步的机会。</p>
+          <p>虽然我不在你身边，没有送上任何对你有意义的礼物，但我始终期望着你的幸福。🎁 我只能用IT的美丽作为礼物给你，虽然这只是一个界面而不是一个实际的礼物，但我希望它能成为在你特别的日子里的一份有意义的心意。🎨</p>
+          <p>我会一直在你身边，支持和鼓励你，所以遇到困难时千万不要放弃。❤️</p>
+          <p>最后，祝小公主在TikTok上吸引更多的关注🎵，让更多的人认识你，也希望你永远收到大人们的大礼物。</p>
+          <p>生日快乐，小公主！🎉🎂🌟 <br>
+            充满爱的祝福，<br>
+            ZERO</p>
+        </div>
+
+        <div class="lettercard__foot">
+          <button class="btn btn--mini" id="letterSkip" type="button">Hiện toàn bộ</button>
+          <p class="lettercard__progress" id="letterProgress" role="status" aria-live="polite"></p>
+        </div>
+        </div>
+      </article>
+    </details>
+  </section>
+
+</main>
+
+
+<!-- ============================================================
+     5. CHÂN TRANG
+     ============================================================ -->
+<footer class="foot">
+  <img class="deco deco--heart-c" src="heart.png" alt="" width="1200" height="1200" loading="lazy" decoding="async" aria-hidden="true">
+  <p class="foot__zh" lang="zh-Hans">生日快乐，小公主！</p>
+  <p class="foot__sig">ZERO</p>
+  <p class="foot__note">Món quà nhỏ này là một trang web tĩnh: mở được cả khi không có mạng, và vẫn sẽ còn ở đây vào những ngày sinh nhật sau.</p>
+  <p class="foot__meta">2026 · Làm bằng HTML, CSS và một chút JavaScript. <a href="#hero">Lên đầu trang ↑</a></p>
+</footer>
+
+
+<!-- ============================================================
+     6. NHẠC NỀN — chỉ phát khi người dùng bấm (chính sách autoplay)
+     ============================================================ -->
+<div class="dock" id="dock" role="group" aria-label="Nhạc nền">
+  <button class="dock__play" id="playBtn" type="button" aria-pressed="false">
+    <span class="dock__disc" aria-hidden="true"></span>
+    <span class="dock__label" id="playLabel">Bật nhạc nền</span>
+  </button>
+  <button class="dock__switch" id="trackBtn" type="button" aria-label="Đổi bài nhạc khác" hidden>
+    <span aria-hidden="true">↻</span> Đổi bài
+  </button>
+  <p class="dock__status" id="musicStatus" role="status" aria-live="polite"></p>
+</div>
+
+<audio id="audio" preload="none" loop></audio>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="script.js" defer></script>
+
+</body>
 </html>
