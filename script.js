@@ -221,13 +221,13 @@
     btn.addEventListener('click', function () {
       var blown = btn.classList.toggle('is-blown');
       btn.setAttribute('aria-pressed', blown ? 'true' : 'false');
-      if (cta) cta.textContent = blown ? 'Thổi lại 🕯️' : 'Thổi nến';
+      if (cta) cta.textContent = blown ? '再吹一次 🕯️' : '吹蜡烛';
 
       if (blown) {
-        say('Điều ước đã được gửi đi. Chúc em một năm thật nhiều niềm vui và bình an.');
+        say('愿望已经送出。祝你新的一年里快乐又平安。');
         fireworks.celebrate();
       } else {
-        say('Nến đã sáng lại. Em có thể ước thêm một điều nữa.');
+        say('蜡烛又亮起来了，你可以再许一个愿望。');
       }
     });
   }());
@@ -287,13 +287,13 @@
     function setProgress(ratio, finished) {
       if (!progress) return;
       if (finished) {
-        if (lastPct !== 100) { progress.textContent = 'Đã viết xong lá thư.'; lastPct = 100; }
+        if (lastPct !== 100) { progress.textContent = '信已经写完了。'; lastPct = 100; }
         return;
       }
       var pct = Math.floor(ratio * 100 / 10) * 10; // cập nhật từng 10% cho khỏi ồn
       if (pct === lastPct) return;
       lastPct = pct;
-      progress.textContent = 'Đang viết… ' + pct + '%';
+      progress.textContent = '正在书写… ' + pct + '%';
     }
 
     function scrollToEnd() {
@@ -409,8 +409,8 @@
     if (!audio || !playBtn) return;
 
     var TRACKS = [
-      { src: 'nhac1.mp3', name: 'Nhạc 1' },
-      { src: 'nhac_cmsn.mp3', name: 'Chúc mừng sinh nhật' }
+      { src: 'nhac1.mp3', name: '音乐 1' },
+      { src: 'nhac_cmsn.mp3', name: '生日快乐歌' }
     ];
     var index = 0;
     var ready = false;
@@ -419,7 +419,7 @@
 
     function setPlaying(isPlaying) {
       playBtn.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
-      if (playLabel) playLabel.textContent = isPlaying ? 'Tạm dừng' : 'Bật nhạc nền';
+      if (playLabel) playLabel.textContent = isPlaying ? '暂停' : '播放音乐';
     }
 
     function load(i) {
@@ -445,7 +445,7 @@
         if (promise && promise.catch) {
           promise.catch(function () {
             setPlaying(false);
-            say('Trình duyệt chưa cho phát nhạc. Em bấm lại giúp một lần nữa nhé.');
+            say('浏览器暂时不让播放音乐，请再点一次。');
           });
         }
       } else {
@@ -456,24 +456,24 @@
     audio.addEventListener('play', function () {
       setPlaying(true);
       if (trackBtn) trackBtn.hidden = false;
-      say('Đang phát: ' + TRACKS[index].name + '.');
+      say('正在播放：' + TRACKS[index].name + '。');
     });
 
     audio.addEventListener('pause', function () {
       setPlaying(false);
-      say('Đã tạm dừng nhạc.');
+      say('音乐已暂停。');
     });
 
     audio.addEventListener('error', function () {
       setPlaying(false);
-      say('Không mở được tệp nhạc “' + TRACKS[index].src + '”.');
+      say('打不开音乐文件 “' + TRACKS[index].src + '”。');
     });
 
     if (trackBtn) {
       trackBtn.addEventListener('click', function () {
         var wasPlaying = !audio.paused;
         load((index + 1) % TRACKS.length);
-        say('Đang phát: ' + TRACKS[index].name + '.');
+        say('正在播放：' + TRACKS[index].name + '。');
         if (wasPlaying) {
           var promise = audio.play();
           if (promise && promise.catch) promise.catch(function () { setPlaying(false); });
@@ -482,7 +482,7 @@
     }
 
     setPlaying(false);
-    say('Nhạc chỉ phát khi em bấm nút.');
+    say('音乐只在你点击按钮后才播放。');
   }());
 
   /* ======================================================================

@@ -34,9 +34,9 @@
   --night-3: #140f26;
   --moon: #f6ecff;
 
-  --font-display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-display: 'Noto Serif SC', 'Songti SC', 'SimSun', 'Times New Roman', Georgia, serif;
   --font-zh: 'Noto Serif SC', 'Songti SC', 'SimSun', 'Noto Sans SC', serif;
-  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --font-script: 'Dancing Script', 'Segoe Script', cursive;
   --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 
