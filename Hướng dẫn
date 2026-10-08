@@ -1,2 +1,149 @@
-Thay đổi Ký tự trong đám mấy ở dòng 417 và 432 trong style.css
-thay đổi ảnh trong  index.html ở dòng 84 và thay đổi tin nhắn ở dòng 95
+HƯỚNG DẪN SỬA TRANG
+====================
+
+Trang này là web tĩnh, chỉ có 3 file cần sửa:
+
+  index.html  -> nội dung (chữ, ảnh, thư)
+  style.css   -> màu sắc, phông chữ, bố cục
+  script.js   -> nhạc nền, hiệu ứng pháo hoa, cách gõ chữ trong thư
+
+Mẹo: mở file bằng VS Code, bấm Ctrl+G rồi gõ số dòng để nhảy đúng chỗ.
+
+
+BẢNG TRA NHANH
+--------------
+
+  Muốn đổi...                     File         Dòng
+  ------------------------------------------------------------
+  Ảnh của người nhận              index.html   86  (xem thêm 14, 87)
+  Lời nhắn (cả lá thư)            index.html   164 - 170
+  Chữ ký ở cuối thư               index.html   170
+  Chữ ký ở cuối trang             index.html   191
+  Tên người nhận (đầu trang)      index.html   52
+  Tiêu đề tab trình duyệt         index.html   6
+  Tiêu đề khi chia sẻ link        index.html   12 - 13
+  Nhạc nền                        script.js    411 - 414
+  Màu sắc                         style.css    18 - 34
+  Phông chữ                       style.css    37 - 40
+
+
+1. ĐỔI ẢNH CỦA NGƯỜI NHẬN
+--------------------------
+
+  index.html dòng 86:  src="Picture3.jpg"
+
+Cách dễ nhất, KHÔNG cần sửa code: đổi tên ảnh mới của bạn thành
+Picture3.jpg rồi chép đè vào thư mục này.
+
+Nên dùng ảnh VUÔNG (tỉ lệ 1:1) để không bị méo. Ảnh gốc là 1563 x 1563.
+
+Còn 2 chỗ liên quan tới ảnh:
+  - index.html dòng 14: ảnh hiện ra khi bạn dán link lên Facebook/Zalo.
+  - index.html dòng 87: dòng alt="..." mô tả ảnh cho người dùng trình đọc
+    màn hình. Nếu đổi ảnh khác người, nhớ sửa lại câu mô tả này.
+
+
+2. ĐỔI LỜI NHẮN (LÁ THƯ)
+-------------------------
+
+index.html dòng 164 - 170.
+
+  - Mỗi cặp <p> ... </p> là MỘT ĐOẠN văn.
+  - Thẻ <br> nghĩa là xuống dòng trong cùng một đoạn.
+  - Muốn thêm đoạn: copy nguyên một dòng <p>...</p> rồi dán thêm bên dưới.
+  - Muốn bớt đoạn: xoá cả cặp <p> và </p> của đoạn đó.
+  - Dòng 170 là chữ ký "ZERO" — đổi thành tên bạn.
+
+LƯU Ý QUAN TRỌNG: chỉ sửa phần CHỮ NẰM GIỮA hai thẻ.
+Đừng xoá các dấu < > vì đó là "khung" của đoạn văn, xoá là trang sẽ vỡ.
+Trong thư có thể dùng emoji bình thường (🎂 🎉 ❤️).
+
+
+3. ĐỔI TÊN / LỜI CHÀO Ở ĐẦU TRANG
+----------------------------------
+
+  index.html dòng 52:  "送给 Pangxie — 今天的小公主"
+       (chỗ chữ Pangxie in đậm — đây là tên người nhận)
+
+  index.html dòng 49:  chữ lớn 生日快乐 (Happy Birthday)
+  index.html dòng 6:   tiêu đề hiện trên tab trình duyệt
+  index.html dòng 12-13: tiêu đề + mô tả khi chia sẻ link
+
+  Các tiêu đề nhỏ của từng phần:
+    dòng 80-81   "这一刻" / "今天的小公主"   (phần ảnh)
+    dòng 112-113 "许愿" / "许个愿吧"          (phần bánh kem)
+    dòng 135-136 "祝福信" / "送小公主!"       (phần lá thư)
+    dòng 146     chữ "Z" trên con dấu sáp
+    dòng 190     "生日快乐，小公主!" ở chân trang
+    dòng 192-193 lời ghi chú và dòng năm ở chân trang
+
+
+4. ĐỔI NHẠC NỀN
+----------------
+
+script.js dòng 411 - 414:
+
+    var TRACKS = [
+      { src: 'nhac1.mp3',     name: '音乐 1' },
+      { src: 'nhac_cmsn.mp3', name: '生日快乐歌' }
+    ];
+
+  - src  = tên file nhạc (phải nằm CÙNG thư mục với index.html).
+  - name = tên hiển thị trong ô nhạc ở góc màn hình.
+  - Muốn thêm bài: thêm một dòng y như vậy, nhớ dấu phẩy giữa các dòng.
+  - Muốn đổi bài mặc định: đưa bài đó lên dòng đầu tiên.
+
+Trang CHỈ phát nhạc khi người xem bấm nút loa ở góc phải dưới — đây là
+quy định của trình duyệt, không phải lỗi. Bấm nút "↻ Đổi bài" để đổi bài.
+
+
+5. ĐỔI MÀU SẮC / PHÔNG CHỮ
+---------------------------
+
+style.css dòng 18 - 34 (phần khai báo màu):
+
+  --paper:    #fff7ee   nền giấy (màu chủ đạo của trang)
+  --red:      #e44545   đỏ (nút bấm, con dấu)
+  --gold:     #e5ae41   vàng (điểm nhấn, bánh kem)
+  --cyan:     #4cc9f3   xanh (bóng bay)
+  --night:    #1b1430   nền trời đêm (phần bánh kem + pháo hoa)
+
+Đổi màu: chỉ thay đoạn mã #...... , giữ nguyên dấu ; ở cuối dòng.
+
+Phông chữ ở dòng 37 - 40:
+  --font-body    chữ thường
+  --font-display chữ tiêu đề lớn
+  --font-script  chữ ký (kiểu viết tay) - hiện dùng cho chữ "ZERO"
+
+
+6. XEM THỬ RỒI ĐĂNG LÊN MẠNG
+------------------------------
+
+Xem thử trên máy: mở thẳng file index.html bằng trình duyệt (nhấp đúp).
+Hoặc nếu muốn xem cho chuẩn như trên mạng, mở Terminal tại thư mục này:
+
+    python3 -m http.server 4321
+
+rồi mở http://127.0.0.1:4321
+
+Đăng lên mạng:
+
+    git add -A
+    git commit -m "Sửa lời nhắn sinh nhật"
+    git push
+
+GitHub Pages sẽ tự cập nhật sau khoảng 1-2 phút, xem tại:
+https://dzerok2020.github.io/happy-birthday-pangxie/
+
+
+7. NHỮNG THỨ KHÔNG NÊN ĐỤNG VÀO
+---------------------------------
+
+  vendor/    thư viện GSAP (hiệu ứng chuyển động). Giữ nguyên — nhờ nó mà
+             trang mở được cả khi không có mạng.
+  script.js  phần logic (đọc thư, pháo hoa, nhạc). Chỉ sửa dòng 411-414.
+  style.css  phần bố cục bên dưới dòng 40. Chỉ sửa phần khai báo màu/font
+             ở trên, trừ khi bạn biết mình đang làm gì.
+
+Nếu lỡ sửa hỏng và muốn quay lại bản cũ: xoá các thay đổi chưa lưu bằng
+git checkout -- index.html style.css script.js
